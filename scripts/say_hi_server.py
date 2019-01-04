@@ -5,7 +5,7 @@ import rospy
 
 def handle_say_hi(req):
     print "Heard " + req.ask
-    return SayHiResponse("I don't know what your say")
+    return SayHiResponse("I don't know what your say: %s" % (req.ask))
 
 def say_hi_server():
     rospy.init_node('say_hi_server')
